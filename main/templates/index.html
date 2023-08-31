@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="pt-5">
+    <div class="container text-center">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+            {% for i in meals %}
+            <div class="col">
+                <div>
+                    <div class="card">
+                        <img src="{{i.strMealThumb}}" class="card-img-top w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">ID: {{i.idMeal}}</h5>
+                            <h5 class="card-title">{{i.strMeal}}</h5>
+
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam
+                                quisquam
+                                veritatis unde nesciunt, dolor velit eaque molestiae facilis consequatur possimus quidem
+                                officiis dolorem laboriosam numquam odio provident voluptas? Esse, quidem?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
